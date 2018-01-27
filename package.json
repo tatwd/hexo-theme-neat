@@ -1,0 +1,23 @@
+{
+  "name": "neat-dev",
+  "version": "1.0.0",
+  "description": "A neat theme for hexo blog.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatwd/hexo-theme-neat.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme"
+  ],
+  "author": "_king (@tatwd)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tatwd/hexo-theme-neat/issues"
+  },
+  "homepage": "https://github.com/tatwd/hexo-theme-neat#readme"
+}
