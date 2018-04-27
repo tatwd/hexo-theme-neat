@@ -1,0 +1,52 @@
+:root {
+  --none: 0;
+  --base-width-size: 320px;
+  --base-mp-size: 16px;
+
+  --xs: 320px;
+  --sm: 425px;
+  --md: 768px;
+  --lg: 1024px;
+}
+
+/** 
+ * reset 
+ */
+
+html,
+body {
+  margin: var(--none);
+  font-family: sans-serif;
+}
+
+/**
+ * custom style -- mobile first (320px)
+ */
+
+.container {
+  margin: var(--none) auto;
+  max-width: var(--base-width-size);
+  padding-left: var(--base-mp-size);
+  padding-right: var(--base-mp-size);
+}
+
+/* > xs */
+@media (min-width: 320px) {
+  :root {
+    --base-width-size: 375px;
+  }
+}
+
+/* > md */
+@media (min-width: 425px) {
+  :root {
+    --base-width-size: 768px;
+  }
+}
+
+/* > lg */
+@media (min-width: 425px) {
+  :root {
+    --base-width-size: 968px;
+  }
+}
