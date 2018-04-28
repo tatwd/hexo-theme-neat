@@ -9,14 +9,14 @@
   --lg: 1024px;
 }
 
-/** 
- * reset 
+/**
+ * reset
  */
 
 html,
 body {
   margin: var(--none);
-  font-family: sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 /**
@@ -30,23 +30,89 @@ body {
   padding-right: var(--base-mp-size);
 }
 
-/* > xs */
+/* xs ~ sm */
 @media (min-width: 320px) {
   :root {
     --base-width-size: 375px;
   }
 }
 
-/* > md */
+/* sm ~ md */
 @media (min-width: 425px) {
   :root {
-    --base-width-size: 768px;
+    --base-width-size: 666px;
+  }
+}
+
+/* md ~ lg */
+@media (min-width: 768px) {
+  :root {
+    --base-width-size: 968px;
   }
 }
 
 /* > lg */
 @media (min-width: 1024px) {
   :root {
-    --base-width-size: 968px;
+    --base-width-size: 1024px;
   }
+}
+
+/* helper util */
+.text-center {
+  text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 24px;
+}
+
+.mt-4 {
+  margin-top: 32px;
+}
+
+.mt-5 {
+  margin-top: 40px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: lighter;
+}
+
+.link-img {
+  font-size: 0;
+}
+
+.goto,
+.goto--github {
+  display: inline-block;
+}
+
+.goto--github:link {
+  opacity: .5;
+}
+
+.goto--github:hover {
+  opacity: 1;
+}
+
+.icon--github {
+  vertical-align: text-bottom;
 }
