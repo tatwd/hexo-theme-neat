@@ -45,7 +45,7 @@ body {
 }
 
 /* > lg */
-@media (min-width: 425px) {
+@media (min-width: 1024px) {
   :root {
     --base-width-size: 968px;
   }
