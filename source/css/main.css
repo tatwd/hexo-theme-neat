@@ -116,3 +116,13 @@ body {
 .icon--github {
   vertical-align: text-bottom;
 }
+
+.avatar::before {
+  display: block;
+  content: '';
+  background: url(../img/ki.svg) no-repeat;
+  height: 72px;
+  width: 72px;
+  margin: 0 auto;
+  margin-top: 42px;
+}

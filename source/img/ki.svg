@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 768 768">
+  <defs>
+    <style>
+      .cls-1{
+        fill: none;
+      }
+      .cls-2{
+        fill:url(#grad_13);
+      }
+      .cls-3{
+        fill:url(#grad_13-2);
+      }
+      .cls-4{
+        fill:url(#grad_13-3);
+      }
+    </style>
+    <linearGradient id="grad_13" x1="195" y1="361" x2="380.55" y2="361" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3f45"/><stop offset="1" stop-color="#aaa"/>
+    </linearGradient>
+    <linearGradient id="grad_13-2" x1="434" y1="400" x2="492" y2="400" xlink:href="#grad_13"/>
+    <linearGradient id="grad_13-3" x1="434" y1="207.5" x2="492" y2="207.5" xlink:href="#grad_13"/>
+  </defs>
+  <title>ki</title>
+  <g id="layer_2" data-name="layer 2">
+    <g id="layer_1-2" data-name="layer 1">
+      <circle class="cls-1" cx="384" cy="384" r="384"/>
+      <path class="cls-2" d="M374,179c5.5,0,8,4.05,5.65,9l-90.3,187c-2.39,5-2,12.82.94,17.49l88.43,142c2.91,4.67.79,8.49-4.71,8.49H345c-5.5,0-12.34-3.84-15.21-8.54l-39.59-64.92c-2.86-4.7-7.18-4.49-9.59.45l-31.23,64C247,539,240.5,543,235,543H205a10,10,0,0,1-10-10V189a10,10,0,0,1,10-10h24a10.12,10.12,0,0,1,10.07,10l.86,119c0,5.5,2.34,6.11,5.11,1.36L316,187.64c2.77-4.75,9.53-8.64,15-8.64Z"/>
+      <path class="cls-3" d="M434,543h48a10,10,0,0,0,10-10V267a10,10,0,0,0-10-10H434"/>
+      <rect class="cls-4" x="434" y="179" width="58" height="57" rx="10" ry="10"/>
+    </g>
+  </g>
+</svg>
