@@ -96,8 +96,9 @@ body {
   font-weight: lighter;
 }
 
-.link-img {
-  font-size: 0;
+a {
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .goto,
@@ -124,5 +125,29 @@ body {
   height: 72px;
   width: 72px;
   margin: 0 auto;
-  margin-top: 42px;
+  margin-top: 16px;
+}
+
+.post__content h2 {
+  margin-top: 32px;
+  position: relative;
+}
+
+.post__content h2::before {
+  content: '#';
+  display: block;
+  /* border-left: 5px solid #f66; */
+  color: #f66;
+  position: absolute;
+  height: 100%;
+  left: -20px;
+  /* top: 12%; */
+}
+
+.post__content a {
+  color: #f66;
+  border-bottom: 2px solid transparent;
+}
+.post__content a:hover {
+  border-color: #f66;
 }

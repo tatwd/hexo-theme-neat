@@ -1,10 +1,10 @@
 <div id="index__mainer">
-  <ul class="post-list" style="max-width:520px;margin:64px auto;padding: 0;">
+  <ul class="post-list" style="max-width:666px;margin:64px auto;padding: 0;">
     <% site.posts.each(function(post, index){ %>
       <li style="margin-bottom: 16px;display:flex;align-items: center;">
         <span style="margin-right: 32px;color:#888;"><%= date(post.date, 'YYYY-M-D') %></span>
         <h3 class="h3 text-upper" style="margin:0;">
-          <a style="text-decoration: none;color:#000;" href="#"><%= post.title %></a>
+          <a style="text-decoration: none;color:#000;" href="<%- url_for(post.path) %>"><%= post.title %></a>
         </h3>
       </li>
     <% }) %>

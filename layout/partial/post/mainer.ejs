@@ -1,0 +1,16 @@
+<div id="post__mainer">
+  <div style="max-width:666px;margin:64px auto;">
+    <div class="post__title">
+      <h4 class="h4"><%= date(page.date, 'YYYY-M-D hh:mm:ss') %></h4>
+      <h1 class="h1 text-upper" style="font-weight: 500;"><%= page.title %></h1>
+    </div>
+    <div class="post__content" style="line-height: 1.8em">
+      <%- page.content %>
+    </div>
+  </div>
+</div>
+<script>
+  !function (){
+    let h2 = document.querySelectorAll('.post__content h2').forEach(item => item.classList.add('text-upper'))
+  }();
+</script>
