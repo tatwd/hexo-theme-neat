@@ -7,9 +7,14 @@
   <link rel="icon" href="">
   <title><%= config.title %></title>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
-  <%- css('css/main.css') %>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono" rel="stylesheet">
+  <%- css('css/common.css') %>
 
+  <% if (page.layout === 'post') { %>
+    <%- css('css/post.css') %>
+  <% } else { %>
+    <%- css('css/index.css') %>
+  <% } %>
 </head>
 <body>
   <div class="container">

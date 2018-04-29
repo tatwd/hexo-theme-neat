@@ -1,11 +1,15 @@
 <div id="index__mainer">
-  <ul class="post-list" style="max-width:666px;margin:64px auto;padding: 0;">
-    <% site.posts.each(function(post, index){ %>
-      <li style="margin-bottom: 16px;display:flex;align-items: center;">
-        <span style="margin-right: 32px;color:#888;"><%= date(post.date, 'YYYY-M-D') %></span>
-        <h3 class="h3 text-upper" style="margin:0;">
-          <a style="text-decoration: none;color:#000;" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        </h3>
+  <ul class="post-list">
+    <% site.posts.sort('date', 'desc').each(function(post, index) { %>
+      <li class="post-list__item">
+        <div class="post-list__item--date">
+          <span class=""><%= date(post.date, 'YYYY-M-D') %></span>
+        </div>
+        <div class="post-list__item--title">
+            <h3 class="h3 text-upper m0">
+              <%- link_to(post.path, post.title, { class: 'color--black' }) %>
+            </h3>
+        </div>
       </li>
     <% }) %>
     </ul>
