@@ -5,9 +5,6 @@
 }
 
 .post-list {
-  max-width: var(--content-width-size);
-  margin: 64px auto;
-  padding: 0;
 }
 
 .post-list__item {
