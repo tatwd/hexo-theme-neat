@@ -1,0 +1,60 @@
+/**
+ * markdown Style
+ */
+:root {
+  --bg-color: #f6f6f6f6;
+  --gutter-bgcolor: #f2f2f2;
+  --font-family: 'Roboto Mono', 'Consolas', monospace;
+  --font-size: 13px;
+
+  --blockquote-border-left: 5px solid #e6e6e6;
+  --blockquote-font-size: 17px;
+  --blockquote-style: italic;
+  --blockquote-color: #999;
+}
+
+/* code highlight */
+.highlight {
+  overflow-x: auto;
+  background-color: var(--bg-color);
+  border-radius: 3px;
+}
+
+.highlight pre {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.highlight,
+.highlight table {
+  margin: 0;
+  width: auto;
+}
+
+.highlight .gutter {
+  width: auto;
+  text-align: right;
+  background-color: var(--gutter-bgcolor);
+  padding: 0 5px;
+  border-radius: 3px;
+  color: #a6a6a6a6;
+}
+
+.highlight .code {
+  width: 100%;
+  padding: 8px 4px;
+}
+
+/* blockquote */
+blockquote {
+  margin: 2em 0;
+  padding-left: 16px;
+  border-left: var(--blockquote-border-left);
+}
+
+blockquote p {
+  font-size: var(--blockquote-font-size);
+  font-style: var(--blockquote-style);
+  color: var(--blockquote-color);
+}
