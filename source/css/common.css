@@ -142,7 +142,7 @@ a {
 .avatar::before {
   display: block;
   content: '';
-  background: url(../img/ki.svg) no-repeat center;
+  background: url(../img/avatar.jpg) no-repeat center;
   background-size: cover;
   border-radius: 50%;
   border: 1px solid #e6e6e6;
