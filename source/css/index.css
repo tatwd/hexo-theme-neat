@@ -2,6 +2,9 @@
   --flex-direction: column;
   --date-position: static;
   --date-mb-size: 16px;
+
+  --date-flex-size: 2;
+  --title-flex-size: calc(12 - var(--date-flex-size));
 }
 
 .post-list {
@@ -15,6 +18,7 @@
 }
 
 .post-list__item--date {
+  flex: var(--date-flex-size);
   position: var(--date-position);
   top: 2px;
   color:#888;
@@ -23,6 +27,7 @@
 }
 
 .post-list__item--title {
+  flex: var(--title-flex-size);
   margin: var(--none);
 }
 
@@ -35,5 +40,12 @@
     --flex-direction: row;
     --date-position: relative;
     --date-mb-size: 0;
+    --date-flex-size: 3;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --date-flex-size: 2;
   }
 }
