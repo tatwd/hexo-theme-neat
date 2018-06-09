@@ -2,15 +2,39 @@
  * markdown Style
  */
 :root {
-  --bg-color: #f6f6f6f6;
+  /* --font-family: 'Roboto Mono', 'Consolas', monospace; */
+  --code-fonts: 'Fira Code', 'Microsoft YaHei', monospace;
+  --bg-color: #f6f6f6;
   --gutter-bgcolor: #f2f2f2;
-  --font-family: 'Roboto Mono', 'Consolas', monospace;
   --font-size: 13px;
+
+
+  --built_in-color: rgb(240, 186, 86);
+  --function-color: rgb(47, 161, 196);
+  --keyword-color: rgb(186, 46, 199);
+  --string-color: #f38080;
+  --comment-color: #c9c9c9;
+  --params-color: #463cdb;
 
   --blockquote-border-left: 5px solid #e6e6e6;
   --blockquote-font-size: 17px;
   --blockquote-style: italic;
   --blockquote-color: #999;
+
+}
+
+p kbd {
+  border: 1px solid #6666;
+  border-radius: 3px;
+  padding: .1em .5em;
+}
+
+p code {
+  padding: .2em .5em;
+  background-color: var(--bg-color);
+  border-radius: 3px;
+  font-family: var(--code-fonts);
+  font-size: var(--font-size);
 }
 
 /* code highlight */
@@ -22,8 +46,9 @@
 
 .highlight pre {
   margin: 0;
-  font-family: var(--font-family);
   font-size: var(--font-size);
+  /* font-family: var(--font-family); */
+  font-family: var(--code-fonts);
 }
 
 .highlight,
@@ -44,6 +69,33 @@
 .highlight .code {
   width: 100%;
   padding: 8px 4px;
+}
+
+/* TODO: add highlight for code */
+
+.line .built_in {
+  color: var(--built_in-color);
+}
+
+.line .function .title {
+  color: var(--function-color);
+}
+
+.line .function .params {
+  color: var(--params-color);
+}
+
+.line .keyword {
+  color: var(--keyword-color);
+}
+
+.line .string {
+  color: var(--string-color);
+}
+
+.line .comment {
+  color: var(--comment-color);
+  font-style: italic;
 }
 
 /* blockquote */
