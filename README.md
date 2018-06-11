@@ -34,3 +34,6 @@ You must clone the unit test template from [offical branch](https://github.com/h
 - [ ] videos
 - [x] 中文测试
 - [x] 日本語テスト
+
+### License
+MIT
