@@ -22,10 +22,28 @@
 }
 
 .post__content a {
-  color: #f66;
+  color: var(--color-red);
   border-bottom: 2px solid transparent;
 }
 
 .post__content a:hover {
   border-color: #f66;
+}
+
+
+.post__content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* for video player */
+.post__content .video-container iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* max-width: 0 auto; */
+  /* text-align: center; */
 }

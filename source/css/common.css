@@ -9,6 +9,9 @@
   --lg: 1024px;
 
   --content-width-size: 666px;
+
+  --color-red: #f66;
+  --color-black: #333;
 }
 
 /**
@@ -84,8 +87,16 @@ body {
   text-transform: uppercase;
 }
 
+.text--red {
+  color: var(--color-red);
+}
+
+.text--black {
+  color: var(--color-black);
+}
+
 .color--black {
-  color: #333;
+  color: var(--color-black);
 }
 
 .mt-1 {
