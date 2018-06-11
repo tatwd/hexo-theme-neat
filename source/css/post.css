@@ -38,12 +38,22 @@
   height: auto;
 }
 
-
 /* for video player */
+.post__content .video-container {
+  position: relative;
+}
 .post__content .video-container iframe {
   max-width: 100%;
   height: auto;
   display: block;
-  /* max-width: 0 auto; */
-  /* text-align: center; */
+  /* position: absolute; */
+}
+
+.post__content hr {
+  border: 1px dashed #f2f2f2;
+}
+
+.post__content u,
+.post__content del {
+  text-decoration-color: var(--color-red);
 }
