@@ -98,6 +98,10 @@ p code {
   font-style: italic;
 }
 
+.line.marked {
+  background-color: #e8e8e8;
+}
+
 /* blockquote */
 blockquote {
   margin: 2em 0;
@@ -109,4 +113,23 @@ blockquote p {
   font-size: var(--blockquote-font-size);
   font-style: var(--blockquote-style);
   color: var(--blockquote-color);
+}
+
+blockquote footer cite {
+  word-break: break-word;
+}
+
+blockquote.pullquote {
+  /* border-color: transparent; */
+  border: 0;
+  /* max-width: 300px; */
+}
+
+blockquote.pullquote.left {
+  float: left;
+  padding-right: 16px;
+}
+
+blockquote.pullquote.right {
+  float: right;
 }
