@@ -3,7 +3,7 @@
     <% site.posts.sort('date', 'desc').each(function(post, index) { %>
       <li class="post-list__item">
         <div class="post-list__item--date">
-          <span class=""><%= date(post.date, 'YYYY-M-D') %></span>
+          <span class=""><%= date(post.date, 'YYYY-MM-DD') %></span>
         </div>
         <div class="post-list__item--title">
             <h3 class="h3 text-upper m0">
