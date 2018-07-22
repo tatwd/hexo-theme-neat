@@ -133,3 +133,14 @@ blockquote.pullquote.left {
 blockquote.pullquote.right {
   float: right;
 }
+
+/* TODO: adapt mobile for jsFiddle
+iframe {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+iframe #wrapper {
+  width: 100%;
+}
+*/
