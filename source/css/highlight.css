@@ -54,16 +54,16 @@ p code {
 .highlight,
 .highlight table {
   margin: 0;
-  width: auto;
+  width: 100%;
 }
 
 .highlight .gutter {
-  width: auto;
+  width: 16px;
   text-align: right;
   background-color: var(--gutter-bgcolor);
   padding: 0 5px;
   border-radius: 3px;
-  color: #a6a6a6a6;
+  color: #a6a6a6;
 }
 
 .highlight .code {
