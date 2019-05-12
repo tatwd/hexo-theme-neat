@@ -20,7 +20,7 @@
 .post-list__item--date {
   flex: var(--date-flex-size);
   position: var(--date-position);
-  top: 2px;
+  top: 5px;
   color:#888;
   margin-right: 32px;
   margin-bottom: var(--date-mb-size)
