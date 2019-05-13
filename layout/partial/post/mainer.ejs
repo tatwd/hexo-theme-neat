@@ -11,6 +11,7 @@
     </div>
     <hr style="border: 1px dashed #eee;">
     <div class="post--comment"></div>
+<% if (theme.comment_sys.ok) { %>
     <%- js('js/talking.dev.js') %>
     <script>
       function renderItem(item) {
@@ -125,5 +126,6 @@
         }
       });
     </script>
+<% } %>
   </div>
 </div>

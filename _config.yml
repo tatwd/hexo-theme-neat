@@ -5,4 +5,5 @@ avatar:
 
 # 评论系统
 comment_sys:
+  ok: false
   api: http://localhost:5000/api/comments
