@@ -8,6 +8,7 @@
 }
 
 .post-list {
+  max-width: 520px;
 }
 
 .post-list__item {
@@ -37,10 +38,10 @@
 
 @media (min-width: 425px) {
   :root {
-    --flex-direction: row;
+    /*--flex-direction: row;
     --date-position: relative;
     --date-mb-size: 0;
-    --date-flex-size: 3;
+    --date-flex-size: 3;*/
   }
 }
 
