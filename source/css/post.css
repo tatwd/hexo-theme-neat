@@ -13,6 +13,7 @@
   position: relative;
   color: #333;
   font-weight: lighter;
+  text-transform: uppercase;
 }
 
 .post__content h2::before {
