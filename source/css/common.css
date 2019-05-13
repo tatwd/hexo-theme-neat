@@ -83,6 +83,10 @@ body {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-upper {
   text-transform: uppercase;
 }
@@ -97,6 +101,9 @@ body {
 
 .color--black {
   color: var(--color-black);
+}
+.mb1 {
+  margin-bottom: 8px;
 }
 
 /*
@@ -154,15 +161,34 @@ a {
   vertical-align: text-bottom;
 }
 
-/* .avatar::before {
+.block {
   display: block;
-  content: '';
-  background: url(../img/avatar.jpg) no-repeat center;
-  background-size: cover;
-  border-radius: 50%;
-  border: 1px solid #e6e6e6;
-  height: 72px;
-  width: 72px;
-  margin: 0 auto;
-  margin-top: 32px;
-} */
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.float--left {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w50 {
+  width: 50%;
+}
