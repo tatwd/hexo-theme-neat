@@ -2,3 +2,7 @@
 avatar:
   url: /img/avatar.jpg
   size: 62px
+
+# 评论系统
+comment_sys:
+  api: http://localhost:5000/api/comments

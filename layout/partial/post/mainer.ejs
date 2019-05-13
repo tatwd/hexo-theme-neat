@@ -50,7 +50,7 @@
       new Talking(() => {
         return {
           el: document.querySelector('.post--comment'),
-          api: 'http://localhost:5000/api/comments',
+          api: '<%- theme.comment_sys.api %>',
           template: `
 <form>
   <p class="tip">加 * 为必填项，其中您输入的邮箱和网址将不会公开！</p>
