@@ -99,25 +99,27 @@ body {
   color: var(--color-black);
 }
 
-.mt-1 {
+/*
+.mt1 {
   margin-top: 8px;
 }
 
-.mt-2 {
+.mt2 {
   margin-top: 16px;
 }
 
-.mt-3 {
+.mt3 {
   margin-top: 24px;
 }
 
-.mt-4 {
+.mt4 {
   margin-top: 32px;
 }
 
-.mt-5 {
+.mt5 {
   margin-top: 40px;
 }
+*/
 
 .h1,
 .h2,
@@ -150,7 +152,7 @@ a {
   vertical-align: text-bottom;
 }
 
-.avatar::before {
+/* .avatar::before {
   display: block;
   content: '';
   background: url(../img/avatar.jpg) no-repeat center;
@@ -161,4 +163,4 @@ a {
   width: 72px;
   margin: 0 auto;
   margin-top: 32px;
-}
+} */
