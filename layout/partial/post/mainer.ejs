@@ -10,30 +10,120 @@
       </div>
     </div>
     <hr style="border: 1px dashed #eee;">
-    <div class="post--comment">
-      <div class="forms">
-        <p>加 * 为必填项，其中您输入的邮箱和网址将不会公开！</p>
-        <p>
-          <label class="inline-block mb1">评论*</label>
-          <textarea name="html_text" rows="4" class="block w100"></textarea>
-        </p>
-        <p class="float--left w50 border-box" style="padding-right:5px;">
-          <label class="inline-block mb1">昵称*</label>
-          <input type="text" name="owner_name" class="block w100">
-        </p>
-        <p class="float--left w50 border-box" style="padding-left:5px;">
-          <label class="inline-block mb1">邮箱*</label>
-          <input type="email" name="owner_email" class="block w100">
-        </p>
-        <p class="clearfix">
-          <label class="inline-block mb1">网址</label>
-          <input type="text" name="owner_website" class="block w100">
-        </p>
-        <p class="text-right"><button>发表评论</button></p>
-      </div>
-      <div class="comments">
-        <!-- render comments here -->
-      </div>
-    </div>
+    <div class="post--comment"></div>
+    <%- js('js/talking.dev.js') %>
+    <script>
+      function renderItem(item) {
+        return `
+          <div class="item" data-id=${item.id}>
+            <b>${item.owner.name}</b>
+            <span>${new Date(item.utcCreated).toLocaleString()}</span>
+            <p>${item.htmlText}</p>
+            <hr style="border:1px solid #eee;">
+          </div>
+        `;
+      }
+
+      function getOwnerInfo() {
+        if (!ownerInfo) {
+          var name = inputOwnerName.value.trim()
+            , email = inputOwnerEmail.value.trim()
+            , url = inputOwnerUrl.value.trim();
+          return { name, email, url }
+        }
+        return ownerInfo;
+      }
+
+      function toggleOwnerInfoInputStuff(show) {
+        var display = show ? 'block' : 'none';
+        inputOwnerName.parentNode.style.display = display;
+        inputOwnerEmail.parentNode.style.display = display;
+        inputOwnerUrl.parentNode.style.display = display;
+        document.querySelector('.tip').style.display = display;
+      }
+
+      var inputOwnerName, inputOwnerEmail, inputOwnerUrl, inputHtmlText;
+      var h1 = document.querySelector('h1');
+      var postTitle = h1 ? h1.innerHTML : 'undefined';
+      console.log(postTitle)
+      var ownerInfo = JSON.parse(localStorage.getItem('COMMENT_OWNER'));
+      new Talking(() => {
+        return {
+          el: document.querySelector('.post--comment'),
+          api: 'http://localhost:5000/api/comments',
+          template: `
+<form>
+  <p class="tip">加 * 为必填项，其中您输入的邮箱和网址将不会公开！</p>
+  <p>
+    <label class="inline-block mb1">评论*</label>
+    <textarea name="html_text" rows="4" class="block w100"></textarea>
+  </p>
+  <div class="clearfix">
+    <p class="float--left w50 border-box" style="padding-right:5px;">
+      <label class="inline-block mb1">昵称*</label>
+      <input type="text" name="owner_name" class="block w100">
+    </p>
+    <p class="float--left w50 border-box" style="padding-left:5px;">
+      <label class="inline-block mb1">邮箱*</label>
+      <input type="email" name="owner_email" class="block w100">
+    </p>
+  </div>
+  <p>
+    <label class="inline-block mb1">网址</label>
+    <input type="text" name="owner_website" class="block w100">
+  </p>
+  <p class="text-right"><button id="submitCommentBtn">发表评论</button></p>
+</form>
+<div class="comments">
+  <!-- render comments here -->
+</div>`,
+
+          inited: (el) => {
+            inputOwnerName = el.querySelector('input[name="owner_name"]');
+            inputOwnerEmail = el.querySelector('input[name="owner_email"]');
+            inputOwnerUrl = el.querySelector('input[name="owner_website"]');
+            inputHtmlText = el.querySelector('textarea[name="html_text"]');
+            el.querySelector('.comments').innerHTML += 'loading ...';
+            toggleOwnerInfoInputStuff(!ownerInfo);
+          },
+
+          render: (res) => {
+            var html = '';
+            res.detail.list.forEach(i => {
+              html += renderItem(i);
+            });
+            document.querySelector('.comments').innerHTML = html || '赶快评论吧！';
+          },
+
+          submit: () => {
+            ownerInfo = getOwnerInfo();
+
+            var /*name = inputOwnerName.value.trim()
+              , email = inputOwnerEmail.value.trim()
+              , url = inputOwnerUrl.value.trim()
+              ,*/ htmlText = inputHtmlText.value.trim()
+              , postUrl = location.href
+            if (!ownerInfo.name) return alert("请输入昵称");
+            if (!ownerInfo.email) return alert("请输入邮箱");
+            if (!htmlText) return alert("请输入评论内容");
+            return {
+              owner: ownerInfo,
+              postTitle,
+              postUrl,
+              htmlText
+            };
+          },
+
+          created: (res) => {
+            document.querySelector('form').reset();
+            localStorage.setItem('COMMENT_OWNER', JSON.stringify(ownerInfo));
+            toggleOwnerInfoInputStuff(false);
+            var dom = document.querySelector('.comments');
+            var html = renderItem(res.detail)
+            dom.innerHTML = dom.innerHTML.length < 10 ? html : html + dom.innerHTML;
+          }
+        }
+      });
+    </script>
   </div>
 </div>
