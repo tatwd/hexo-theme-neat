@@ -132,6 +132,7 @@ body {
 
 a {
   color: #666;
+  outline: 0;
   text-decoration: none;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
