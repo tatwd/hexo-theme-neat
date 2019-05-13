@@ -9,8 +9,31 @@
         <%- page.content %>
       </div>
     </div>
+    <hr style="border: 1px dashed #eee;">
     <div class="post--comment">
-      <!-- TODO -->
+      <div class="forms">
+        <p>加 * 为必填项，其中您输入的邮箱和网址将不会公开！</p>
+        <p>
+          <label class="inline-block mb1">评论*</label>
+          <textarea name="html_text" rows="4" class="block w100"></textarea>
+        </p>
+        <p class="float--left w50 border-box" style="padding-right:5px;">
+          <label class="inline-block mb1">昵称*</label>
+          <input type="text" name="owner_name" class="block w100">
+        </p>
+        <p class="float--left w50 border-box" style="padding-left:5px;">
+          <label class="inline-block mb1">邮箱*</label>
+          <input type="email" name="owner_email" class="block w100">
+        </p>
+        <p class="clearfix">
+          <label class="inline-block mb1">网址</label>
+          <input type="text" name="owner_website" class="block w100">
+        </p>
+        <p class="text-right"><button>发表评论</button></p>
+      </div>
+      <div class="comments">
+        <!-- render comments here -->
+      </div>
     </div>
   </div>
 </div>
