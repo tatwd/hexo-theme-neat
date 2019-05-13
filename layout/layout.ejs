@@ -14,12 +14,12 @@
     .avatar::before {
       display: block;
       content: '';
-      background: url('<%= theme.avatar %>') no-repeat center;
+      background: url('<%= theme.avatar.url %>') no-repeat center;
       background-size: cover;
       border-radius: 50%;
       border: 1px solid #e6e6e6;
-      height: 72px;
-      width: 72px;
+      height: <%= theme.avatar.size %>;
+      width: <%= theme.avatar.size %>;
       margin: 0 auto;
       margin-top: 32px;
     }
