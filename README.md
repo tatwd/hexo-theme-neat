@@ -21,7 +21,7 @@ You must clone the unit test template from [offical branch](https://github.com/h
 > from [hexo-theme-unit-test](https://github.com/hexojs/hexo-theme-unit-test)
 - [x] hello world
 - [ ] categoriess
-- [ ] elements
+- [x] elements
 - [ ] excerpts
 - [ ] gallery post
 - [x] images
@@ -29,7 +29,7 @@ You must clone the unit test template from [offical branch](https://github.com/h
 - [x] link post
 - [x] long title
 - [x] no title
-- [ ] tag plugins
+- [x] tag plugins
 - [ ] tags
 - [ ] videos
 - [x] 中文测试
