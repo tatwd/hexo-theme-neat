@@ -3,6 +3,11 @@ avatar:
   url: /img/avatar.jpg
   size: 62px
 
+# 个人链接
+links:
+  github: tatwd
+  email:
+
 # 评论系统
 comment_sys:
   ok: false
