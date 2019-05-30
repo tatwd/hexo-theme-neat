@@ -66,5 +66,7 @@
 table {
   table-layout: fixed;
   width: 100%;
-  word-wrap: break-all;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  border-collapse: collapse;
 }
