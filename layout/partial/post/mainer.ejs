@@ -46,7 +46,6 @@
       var inputOwnerName, inputOwnerEmail, inputOwnerUrl, inputHtmlText;
       var h1 = document.querySelector('h1');
       var postTitle = h1 ? h1.innerHTML : 'undefined';
-      console.log(postTitle)
       var ownerInfo = JSON.parse(localStorage.getItem('COMMENT_OWNER'));
       new Talking(() => {
         return {
@@ -107,6 +106,10 @@
             if (!ownerInfo.name) return alert("请输入昵称");
             if (!ownerInfo.email) return alert("请输入邮箱");
             if (!htmlText) return alert("请输入评论内容");
+            var s = htmlText
+              .replace(/<(\/?script)>/g, ($1, $2) => '&lt;' + $2 + '&gt;')
+              .replace(/\r?\n/g, '<br>');
+            htmlText = s;
             return {
               owner: ownerInfo,
               postTitle,
