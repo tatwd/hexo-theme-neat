@@ -33,7 +33,7 @@
   function _getComments() {
     _http({
       method: 'GET',
-      url: _data.api + '?post_url=' + location.href,
+      url: _data.api + '?post_url=' + location.href.replace(/^https?:\/\//, ''),
       success: function(res) {
         if (_data.render) _data.render(res);
       }

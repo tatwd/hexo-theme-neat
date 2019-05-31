@@ -102,7 +102,7 @@
               , email = inputOwnerEmail.value.trim()
               , url = inputOwnerUrl.value.trim()
               ,*/ htmlText = inputHtmlText.value.trim()
-              , postUrl = location.href
+              , postUrl = location.href.replace(/^https?:\/\//, '');
             if (!ownerInfo.name) return alert("请输入昵称");
             if (!ownerInfo.email) return alert("请输入邮箱");
             if (!htmlText) return alert("请输入评论内容");
