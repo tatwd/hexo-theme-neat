@@ -57,6 +57,7 @@ p code {
 .highlight table {
   margin: 0;
   width: 100%;
+  word-wrap: normal;
 }
 
 .highlight figcaption {
