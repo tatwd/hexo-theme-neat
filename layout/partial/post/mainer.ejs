@@ -81,9 +81,11 @@
             inputOwnerUrl = el.querySelector('input[name="owner_website"]');
             inputHtmlText = el.querySelector('textarea[name="html_text"]');
             el.querySelector('.comments').innerHTML += 'loading ...';
-            inputOwnerName.value = ownerInfo.name;
-            inputOwnerEmail.value = ownerInfo.email;
-            inputOwnerUrl.value = ownerInfo.url;
+            if (ownerInfo) {
+              inputOwnerName.value = ownerInfo.name;
+              inputOwnerEmail.value = ownerInfo.email;
+              inputOwnerUrl.value = ownerInfo.url;
+            }
           },
 
           render: (res) => {
