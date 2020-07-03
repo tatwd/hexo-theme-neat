@@ -120,7 +120,7 @@
           },
 
           created: (res) => {
-            document.querySelector('form').reset();
+            //document.querySelector('form').reset();
             localStorage.setItem('COMMENT_OWNER', JSON.stringify(ownerInfo));
             var dom = document.querySelector('.comments');
             var html = renderItem(res.detail)
