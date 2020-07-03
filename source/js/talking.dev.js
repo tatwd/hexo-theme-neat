@@ -1,4 +1,4 @@
-!(function() {
+!(function () {
   var _data = {};
   var _xhr = new XMLHttpRequest();
 
@@ -15,7 +15,7 @@
 `;
 
   function _http(options) {
-    _xhr.onreadystatechange = function(evt) {
+    _xhr.onreadystatechange = function (evt) {
       if (_xhr.readyState === 4 && _xhr.status === 200) {
         var res = JSON.parse(_xhr.responseText);
         if (options.success) options.success(res);
@@ -32,33 +32,33 @@
 
   function _getComments() {
     _http({
-      method: 'GET',
-      url: _data.api + '?post_url=' + location.href.replace(/^https?:\/\//, ''),
-      success: function(res) {
+      method: "GET",
+      url: _data.api + "?post_url=" + location.pathname,
+      success: function (res) {
         if (_data.render) _data.render(res);
-      }
+      },
     });
   }
 
   function _createComment(data) {
     _http({
-      method: 'POST',
+      method: "POST",
       url: _data.api,
       data: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      success: function(res) {
+      success: function (res) {
         _data.created(res);
-      }
+      },
     });
   }
 
   function _init() {
     _data.el.innerHTML = `${_data.template || _template}`;
-    _data.el.addEventListener('click', function(evt) {
+    _data.el.addEventListener("click", function (evt) {
       evt.preventDefault();
-      if (evt.target.id === 'submitCommentBtn') {
+      if (evt.target.id === "submitCommentBtn") {
         var newItem = _data.submit();
         if (newItem) _createComment(newItem);
       }

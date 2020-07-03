@@ -26,22 +26,19 @@
       }
 
       function getOwnerInfo() {
-        if (!ownerInfo) {
-          var name = inputOwnerName.value.trim()
-            , email = inputOwnerEmail.value.trim()
-            , url = inputOwnerUrl.value.trim();
-          return { name, email, url }
-        }
-        return ownerInfo;
+        var name = inputOwnerName.value.trim()
+          , email = inputOwnerEmail.value.trim()
+          , url = inputOwnerUrl.value.trim();
+        return { name, email, url }
       }
 
-      function toggleOwnerInfoInputStuff(show) {
+      /*function toggleOwnerInfoInputStuff(show) {
         var display = show ? 'block' : 'none';
         inputOwnerName.parentNode.style.display = display;
         inputOwnerEmail.parentNode.style.display = display;
         inputOwnerUrl.parentNode.style.display = display;
         document.querySelector('.tip').style.display = display;
-      }
+      }*/
 
       var inputOwnerName, inputOwnerEmail, inputOwnerUrl, inputHtmlText;
       var h1 = document.querySelector('h1');
@@ -84,7 +81,9 @@
             inputOwnerUrl = el.querySelector('input[name="owner_website"]');
             inputHtmlText = el.querySelector('textarea[name="html_text"]');
             el.querySelector('.comments').innerHTML += 'loading ...';
-            toggleOwnerInfoInputStuff(!ownerInfo);
+            inputOwnerName.value = ownerInfo.name;
+            inputOwnerEmail.value = ownerInfo.email;
+            inputOwnerUrl.value = ownerInfo.url;
           },
 
           render: (res) => {
@@ -102,7 +101,7 @@
               , email = inputOwnerEmail.value.trim()
               , url = inputOwnerUrl.value.trim()
               ,*/ htmlText = inputHtmlText.value.trim()
-              , postUrl = location.href.replace(/^https?:\/\//, '');
+              , postUrl = location.pathname;
             if (!ownerInfo.name) return alert("请输入昵称");
             if (!ownerInfo.email) return alert("请输入邮箱");
             if (!htmlText) return alert("请输入评论内容");
@@ -121,7 +120,6 @@
           created: (res) => {
             document.querySelector('form').reset();
             localStorage.setItem('COMMENT_OWNER', JSON.stringify(ownerInfo));
-            toggleOwnerInfoInputStuff(false);
             var dom = document.querySelector('.comments');
             var html = renderItem(res.detail)
             dom.innerHTML = dom.innerHTML.length < 10 ? html : html + dom.innerHTML;
