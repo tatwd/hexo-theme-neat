@@ -121,6 +121,7 @@
 
           created: (res) => {
             //document.querySelector('form').reset();
+            inputHtmlText.value = '';
             localStorage.setItem('COMMENT_OWNER', JSON.stringify(ownerInfo));
             var dom = document.querySelector('.comments');
             var html = renderItem(res.detail)
