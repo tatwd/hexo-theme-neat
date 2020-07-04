@@ -39,7 +39,7 @@
     </a>
 <% } %>
 <% if (theme.links.feed) { %>
-    <a class="goto" href="<%= theme.links.feed %>" target="_blank">
+    <a class="goto" href="<%= config.url.trim('/') %>/<%= theme.links.feed %>" target="_blank">
       <svg 
         class="icon"
         width="16"
