@@ -6,7 +6,8 @@ avatar:
 # 个人链接
 links:
   github: tatwd
-  email:
+  email: tatwdo@gmail.com
+  feed: atom.xml
 
 # 评论系统
 comment_sys:
