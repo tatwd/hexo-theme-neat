@@ -21,7 +21,7 @@
 html,
 body {
   margin: var(--none);
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-family: "Montserrat", "Open Sans", sans-serif;
 }
 
 /**
@@ -144,20 +144,23 @@ a {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.goto,
-.goto--github {
+.goto {
   display: inline-block;
 }
 
-.goto--github:link {
-  opacity: .5;
+.goto:not(:first-child) {
+  margin-left: 0.3rem;
 }
 
-.goto--github:hover {
+.goto:link {
+  opacity: 0.5;
+}
+
+.goto:hover {
   opacity: 1;
 }
 
-.icon--github {
+.icon {
   vertical-align: text-bottom;
 }
 
