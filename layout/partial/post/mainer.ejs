@@ -17,7 +17,7 @@
       function renderItem(item) {
         return `
           <div class="item" data-id=${item.id}>
-            <b>${item.owner.name}</b>
+            <b><a href="${item.owner.url}">${item.owner.name}</a></b>
             <span>${new Date(item.utcCreated).toLocaleString()}</span>
             <p>${item.htmlText}</p>
             <hr style="border:1px solid #eee;">
@@ -50,7 +50,7 @@
           api: '<%- theme.comment_sys.api %>',
           template: `
 <form>
-  <p class="tip">加 * 为必填项，其中您输入的邮箱和网址将不会公开！</p>
+  <p class="tip">加 * 为必填项，其中您输入的邮箱将不会公开！</p>
   <p>
     <label class="inline-block mb1">评论*</label>
     <textarea name="html_text" rows="4" class="block w100"></textarea>
