@@ -17,7 +17,7 @@
       function renderItem(item) {
         return `
           <div class="item" data-id=${item.id}>
-            <b><a href="${item.owner.url}">${item.owner.name}</a></b>
+            <a href="${item.owner.url}" target="_blank" class="text--underline text--bold">${item.owner.name}</a>
             <span>${new Date(item.utcCreated).toLocaleString()}</span>
             <p>${item.htmlText}</p>
             <hr style="border:1px solid #eee;">

@@ -144,6 +144,14 @@ a {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+.text--underline {
+  text-decoration: underline;
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
 .goto {
   display: inline-block;
 }
