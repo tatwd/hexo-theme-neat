@@ -57,8 +57,8 @@
   function _init() {
     _data.el.innerHTML = `${_data.template || _template}`;
     _data.el.addEventListener("click", function (evt) {
-      evt.preventDefault();
       if (evt.target.id === "submitCommentBtn") {
+        evt.preventDefault();
         var newItem = _data.submit();
         if (newItem) _createComment(newItem);
       }
