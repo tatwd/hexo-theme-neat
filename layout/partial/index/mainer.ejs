@@ -1,7 +1,7 @@
 <div id="index__mainer">
   <ul class="sm-container p0 post-list">
     <% site.posts.sort('date', 'desc')
-        .slice((page.current-1) * config.per_page + 1, page.current * config.per_page)
+        .slice((page.current-1) * config.per_page, page.current * config.per_page)
         .each(function(post, index) {
     %>
       <li class="post-list__item">
