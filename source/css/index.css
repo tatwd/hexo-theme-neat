@@ -12,7 +12,7 @@
 }
 
 .post-list__item {
-  display:flex;
+  display: flex;
   align-items: flex-start;
   flex-direction: var(--flex-direction);
   margin-bottom: 32px;
@@ -22,9 +22,9 @@
   flex: var(--date-flex-size);
   position: var(--date-position);
   top: 5px;
-  color:#888;
+  color: #888;
   margin-right: 32px;
-  margin-bottom: var(--date-mb-size)
+  margin-bottom: var(--date-mb-size);
 }
 
 .post-list__item--title {
@@ -34,6 +34,16 @@
 
 .post-list__item--title a:hover {
   color: #f66;
+}
+
+.page-number {
+  padding: 0 5px;
+}
+
+.page-number.current {
+  color: #f66;
+  /* border-bottom: 2px solid; */
+  text-decoration: underline;
 }
 
 @media (min-width: 425px) {
