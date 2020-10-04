@@ -94,11 +94,11 @@ p code {
 .line .function .title {
   color: var(--function-color);
 }
-
+/*
 .line .function .params {
   color: var(--params-color);
 }
-
+*/
 .line .keyword {
   color: var(--keyword-color);
 }
