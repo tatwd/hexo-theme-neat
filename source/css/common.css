@@ -17,6 +17,12 @@
   --icon-link-color: #234;
 }
 
+html[theme="dark"] {
+  --bgcolor: #282c35;
+  --color-black: #fff;
+  --icon-link-color: #fff;
+}
+
 /**
  * reset
  */
@@ -26,12 +32,6 @@ body {
   margin: var(--none);
   font-family: "Montserrat", "Open Sans", sans-serif;
   background-color: var(--bgcolor);
-}
-
-html[theme="dark"] {
-  --bgcolor: #282c35;
-  --color-black: #fff;
-  --icon-link-color: #fff;
 }
 
 /**
