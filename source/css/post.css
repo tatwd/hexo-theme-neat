@@ -1,17 +1,31 @@
+:root {
+  --post-text-color: #666;
+  --post-title-color: #333;
+}
+
+html[theme="dark"] {
+  --post-text-color: hsla(0,0%,100%,0.88);
+  --post-title-color: #fff;
+}
+
 .post--body {
   width: 100%;
+}
+
+.post__title {
+  color: var(--post-title-color);
 }
 
 .post__content {
   line-height: 1.8em;
   text-align: left;
-  color: #666;
+  color: var(--post-text-color);
 }
 
 .post__content h2 {
   margin-top: 32px;
   position: relative;
-  color: #333;
+  color: var(--post-title-color);
   font-weight: lighter;
   text-transform: uppercase;
 }

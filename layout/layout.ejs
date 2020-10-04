@@ -41,5 +41,18 @@
   <div class="container">
     <%- body %>
   </div>
+  <script>
+    !(function(){
+      var dateNow = new Date();
+      var h = dateNow.getHours();
+      // auto toggle theme
+      if (h < 6 || h >= 18) document.querySelector('html').setAttribute('theme', 'dark');
+      var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      darkQuery.addListener(function(e) {
+        // TODO
+        console.log(e)
+      });
+    })()
+  </script>
 </body>
 </html>

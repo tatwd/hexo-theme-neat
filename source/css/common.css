@@ -12,6 +12,9 @@
 
   --color-red: #f66;
   --color-black: #333;
+  --bgcolor: #fff;
+
+  --icon-link-color: #234;
 }
 
 /**
@@ -22,6 +25,13 @@ html,
 body {
   margin: var(--none);
   font-family: "Montserrat", "Open Sans", sans-serif;
+  background-color: var(--bgcolor);
+}
+
+html[theme="dark"] {
+  --bgcolor: #282c35;
+  --color-black: #fff;
+  --icon-link-color: #fff;
 }
 
 /**
@@ -102,6 +112,7 @@ body {
 .color--black {
   color: var(--color-black);
 }
+
 .mb1 {
   margin-bottom: 8px;
 }
@@ -168,8 +179,9 @@ a {
   opacity: 1;
 }
 
-.icon {
+svg.icon {
   vertical-align: text-bottom;
+  fill: var(--icon-link-color);
 }
 
 .block {

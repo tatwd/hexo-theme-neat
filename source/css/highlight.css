@@ -8,7 +8,6 @@
   --gutter-bgcolor: #f2f2f2;
   --font-size: 13px;
 
-
   --built_in-color: rgb(240, 186, 86);
   --function-color: rgb(47, 161, 196);
   --keyword-color: rgb(186, 46, 199);
@@ -21,6 +20,13 @@
   --blockquote-style: italic;
   --blockquote-color: #999;
 
+  --marked-bgcolor: #e8e8e8;
+}
+
+html[theme="dark"] {
+  --bg-color: #011627;
+  --gutter-bgcolor: #011627;
+  --marked-bgcolor: #234;
 }
 
 p kbd {
@@ -44,6 +50,7 @@ p code {
   background-color: var(--bg-color);
   border-radius: 3px;
   line-height: 1.5em;
+  margin: 0 0 15px 0;
 }
 
 .highlight pre {
@@ -55,7 +62,6 @@ p code {
 
 .highlight,
 .highlight table {
-  margin: 0;
   width: 100%;
   word-wrap: normal;
 }
@@ -107,7 +113,7 @@ p code {
 }
 
 .line.marked {
-  background-color: #e8e8e8;
+  background-color: var(--marked-bgcolor);
 }
 
 /* blockquote */
