@@ -1,5 +1,5 @@
 .post--comment {
-  color: #666;
+  color: var(--post-text-color);
 }
 
 .post--comment input,
