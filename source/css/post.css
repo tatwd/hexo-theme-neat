@@ -4,7 +4,7 @@
 }
 
 html[theme="dark"] {
-  --post-text-color: hsla(0,0%,100%,0.88);
+  --post-text-color: hsla(0, 0%, 100%, 0.88);
   --post-title-color: #fff;
 }
 
@@ -28,10 +28,11 @@ html[theme="dark"] {
   color: var(--post-title-color);
   font-weight: lighter;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .post__content h2::before {
-  content: '';
+  content: "";
   display: block;
   border-left: 5px solid #f66;
   color: #f66;

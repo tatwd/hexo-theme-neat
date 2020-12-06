@@ -8,6 +8,15 @@
       <div class="post__content">
         <%- page.content %>
       </div>
+      <script>
+        document.querySelector('.post__content').addEventListener('click', function(event){
+          var target = event.target
+          var id = target.id
+          if (target.nodeName === 'H2' && id) {
+            location.hash = '#' + id
+          }
+        })
+      </script>
     </div>
     <hr style="border: 1px dashed #eee;">
     <div class="post--comment"></div>
