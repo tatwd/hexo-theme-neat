@@ -16,7 +16,7 @@
   font-family: inherit;
   font-size: inherit;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 textarea {
@@ -32,6 +32,6 @@ textarea {
   cursor: pointer;
   width: 111px;
   font-size: inherit;
-  background-color:#666;
+  background-color: #666;
   color: #fff;
 }

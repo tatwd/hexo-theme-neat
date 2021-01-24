@@ -17,7 +17,7 @@
   --icon-link-color: #234;
 }
 
-html[theme="dark"] {
+html[theme='dark'] {
   --bgcolor: #282c35;
   --color-black: #fff;
   --icon-link-color: #fff;
@@ -30,7 +30,7 @@ html[theme="dark"] {
 html,
 body {
   margin: var(--none);
-  font-family: "Montserrat", "Open Sans", sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
   background-color: var(--bgcolor);
 }
 
@@ -201,7 +201,7 @@ svg.icon {
 }
 
 .clearfix::after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
   height: 0;

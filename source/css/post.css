@@ -3,7 +3,7 @@
   --post-title-color: #333;
 }
 
-html[theme="dark"] {
+html[theme='dark'] {
   --post-text-color: hsla(0, 0%, 100%, 0.88);
   --post-title-color: #fff;
 }
@@ -32,7 +32,7 @@ html[theme="dark"] {
 }
 
 .post__content h2::before {
-  content: "";
+  content: '';
   display: block;
   border-left: 5px solid #f66;
   color: #f66;
@@ -83,4 +83,54 @@ table {
   word-wrap: break-word;
   box-sizing: border-box;
   border-collapse: collapse;
+}
+
+p kbd {
+  border: 1px solid #6666;
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
+}
+
+p code {
+  padding: 0.2em 0.5em;
+  background-color: var(--bg-color);
+  border-radius: 3px;
+  font-family: var(--code-fonts);
+}
+
+/* blockquote */
+blockquote {
+  --blockquote-border-left: 5px solid #e6e6e6;
+  --blockquote-font-size: 17px;
+  --blockquote-style: italic;
+  --blockquote-color: #999;
+
+  margin: 2em 0;
+  padding-left: 16px;
+  border-left: var(--blockquote-border-left);
+}
+
+blockquote p {
+  font-size: var(--blockquote-font-size);
+  font-style: var(--blockquote-style);
+  color: var(--blockquote-color);
+}
+
+blockquote footer cite {
+  word-break: break-word;
+}
+
+blockquote.pullquote {
+  /* border-color: transparent; */
+  border: 0;
+  /* max-width: 300px; */
+}
+
+blockquote.pullquote.left {
+  float: left;
+  padding-right: 16px;
+}
+
+blockquote.pullquote.right {
+  float: right;
 }

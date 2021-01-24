@@ -47,12 +47,12 @@
 }
 
 @media (min-width: 425px) {
-  :root {
-    /*--flex-direction: row;
+  /*:root {
+    --flex-direction: row;
     --date-position: relative;
     --date-mb-size: 0;
-    --date-flex-size: 3;*/
-  }
+    --date-flex-size: 3;
+  }*/
 }
 
 @media (min-width: 768px) {

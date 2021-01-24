@@ -3,7 +3,8 @@
  */
 :root {
   /* --font-family: 'Roboto Mono', 'Consolas', monospace; */
-  --code-fonts: 'Fira Code', Consolas, Liberation Mono, Menlo, 'Microsoft Yahei', Courier, monospace;
+  --code-fonts: 'Fira Code', Consolas, Liberation Mono, Menlo, 'Microsoft Yahei',
+    Courier, monospace;
   --bg-color: #f6f6f6;
   --gutter-bgcolor: #f2f2f2;
   --font-size: 13px;
@@ -23,7 +24,7 @@
   --marked-bgcolor: #e8e8e8;
 }
 
-html[theme="dark"] {
+html[theme='dark'] {
   --bg-color: #011627;
   --gutter-bgcolor: #011627;
   --marked-bgcolor: #234;
@@ -32,16 +33,16 @@ html[theme="dark"] {
 p kbd {
   border: 1px solid #6666;
   border-radius: 3px;
-  padding: .1em .5em;
+  padding: 0.1em 0.5em;
 }
 
-p code {
-  padding: .2em .5em;
+/* p code {
+  padding: 0.2em 0.5em;
   background-color: var(--bg-color);
   border-radius: 3px;
   font-family: var(--code-fonts);
   font-size: var(--font-size);
-}
+} */
 
 /* code highlight */
 .highlight {
@@ -82,7 +83,7 @@ p code {
 
 .highlight .code {
   width: 100%;
-  padding: 16px;/* 8px 4px; */
+  padding: 16px; /* 8px 4px; */
 }
 
 /* TODO: add highlight for code */
