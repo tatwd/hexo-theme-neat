@@ -3,11 +3,18 @@
   --code-color: #666;
   --code-fonts: 'SFMono-Regular', Consolas, Monaco, Menlo, 'Andale Mono',
     'Ubuntu Mono', monospace;
+  --code-size: 13px;
 }
 
 html[theme='dark'] {
   --bg-color: #011627;
   --code-color: #ccc;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --code-size: 1em;
+  }
 }
 
 /** prism.js custom theme */
@@ -17,7 +24,7 @@ pre[class*='language-'] {
   color: var(--code-color);
   background: none;
   font-family: var(--code-fonts);
-  font-size: 13px;
+  font-size: var(--code-size);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
