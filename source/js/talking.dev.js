@@ -32,8 +32,8 @@
 
   function _getComments() {
     _http({
-      method: "GET",
-      url: _data.api + "?post_url=" + location.pathname,
+      method: 'GET',
+      url: _data.api + '?post_url=' + location.pathname,
       success: function (res) {
         if (_data.render) _data.render(res);
       },
@@ -42,11 +42,11 @@
 
   function _createComment(data) {
     _http({
-      method: "POST",
+      method: 'POST',
       url: _data.api,
       data: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       success: function (res) {
         _data.created(res);
@@ -56,8 +56,8 @@
 
   function _init() {
     _data.el.innerHTML = `${_data.template || _template}`;
-    _data.el.addEventListener("click", function (evt) {
-      if (evt.target.id === "submitCommentBtn") {
+    _data.el.addEventListener('click', function (evt) {
+      if (evt.target.id === 'submitCommentBtn') {
         evt.preventDefault();
         var newItem = _data.submit();
         if (newItem) _createComment(newItem);

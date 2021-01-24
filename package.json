@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/tatwd/hexo-theme-neat/issues"
   },
-  "homepage": "https://github.com/tatwd/hexo-theme-neat#readme"
+  "homepage": "https://github.com/tatwd/hexo-theme-neat#readme",
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  }
 }

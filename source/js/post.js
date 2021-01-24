@@ -30,22 +30,22 @@
   }*/
 
   var inputOwnerName, inputOwnerEmail, inputOwnerUrl, inputHtmlText;
-  var h1 = document.querySelector("h1");
-  var postTitle = h1 ? h1.innerHTML : "undefined";
-  var ownerInfo = JSON.parse(localStorage.getItem("COMMENT_OWNER"));
+  var h1 = document.querySelector('h1');
+  var postTitle = h1 ? h1.innerHTML : 'undefined';
+  var ownerInfo = JSON.parse(localStorage.getItem('COMMENT_OWNER'));
 
   new Talking(() => {
     return {
-      el: document.querySelector(".post--comment"),
-      api: "<%- theme.comment_sys.api %>",
-      template: document.querySelector("#comment-tmpl").innerHTML,
+      el: document.querySelector('.post--comment'),
+      api: window.hexoThemeConfig.comment_sys_api,
+      template: document.querySelector('#comment-tmpl').innerHTML,
 
       inited: (el) => {
         inputOwnerName = el.querySelector('input[name="owner_name"]');
         inputOwnerEmail = el.querySelector('input[name="owner_email"]');
         inputOwnerUrl = el.querySelector('input[name="owner_website"]');
         inputHtmlText = el.querySelector('textarea[name="html_text"]');
-        el.querySelector(".comments").innerHTML += "loading ...";
+        el.querySelector('.comments').innerHTML += 'loading ...';
         if (ownerInfo) {
           inputOwnerName.value = ownerInfo.name;
           inputOwnerEmail.value = ownerInfo.email;
@@ -54,11 +54,11 @@
       },
 
       render: (res) => {
-        var html = "";
+        var html = '';
         res.detail.list.forEach((i) => {
           html += renderItem(i);
         });
-        document.querySelector(".comments").innerHTML = html || "赶快评论吧！";
+        document.querySelector('.comments').innerHTML = html || '赶快评论吧！';
       },
 
       submit: () => {
@@ -69,12 +69,12 @@
           , url = inputOwnerUrl.value.trim()
           ,*/ htmlText = inputHtmlText.value.trim(),
           postUrl = location.pathname;
-        if (!ownerInfo.name) return alert("请输入昵称");
-        if (!ownerInfo.email) return alert("请输入邮箱");
-        if (!htmlText) return alert("请输入评论内容");
+        if (!ownerInfo.name) return alert('请输入昵称');
+        if (!ownerInfo.email) return alert('请输入邮箱');
+        if (!htmlText) return alert('请输入评论内容');
         var s = htmlText
-          .replace(/<(\/?script)>/g, ($1, $2) => "&lt;" + $2 + "&gt;")
-          .replace(/\r?\n/g, "<br>");
+          .replace(/<(\/?script)>/g, ($1, $2) => '&lt;' + $2 + '&gt;')
+          .replace(/\r?\n/g, '<br>');
         htmlText = s;
         return {
           owner: ownerInfo,
@@ -86,9 +86,9 @@
 
       created: (res) => {
         //document.querySelector('form').reset();
-        inputHtmlText.value = "";
-        localStorage.setItem("COMMENT_OWNER", JSON.stringify(ownerInfo));
-        var dom = document.querySelector(".comments");
+        inputHtmlText.value = '';
+        localStorage.setItem('COMMENT_OWNER', JSON.stringify(ownerInfo));
+        var dom = document.querySelector('.comments');
         var html = renderItem(res.detail);
         dom.innerHTML = dom.innerHTML.length < 10 ? html : html + dom.innerHTML;
       },
