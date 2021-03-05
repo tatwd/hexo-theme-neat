@@ -11,12 +11,14 @@
   line-height: 1.5;
   padding: 8px 10px;
   border: 1px solid #666;
-  border-radius: 0;
+  border-radius: 3px;
   /* outline: 0; */
   font-family: inherit;
   font-size: inherit;
   -webkit-appearance: none;
   appearance: none;
+  background-color: inherit;
+  color: inherit;
 }
 
 textarea {
@@ -34,4 +36,14 @@ textarea {
   font-size: inherit;
   background-color: #666;
   color: #fff;
+}
+
+.post--comment a.owner {
+  color: #f66;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2em;
+}
+
+.post--comment a.owner:hover {
+  border-color: #f66;
 }
